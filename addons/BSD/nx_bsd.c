@@ -8258,7 +8258,7 @@ static UINT nx_bsd_isxdigit(UCHAR c)
 /*  05-19-2020     Yuxin Zhou               Initial Version 6.0           */
 /*                                                                        */
 /**************************************************************************/
-VOID set_errno(INT tx_errno)
+VOID set_errno(INT bsd_errno)
 {
 
 TX_INTERRUPT_SAVE_AREA
@@ -8268,7 +8268,7 @@ TX_THREAD       *current_thread_ptr;
       TX_DISABLE
 
       current_thread_ptr =  tx_thread_identify();
-      current_thread_ptr -> bsd_errno = tx_errno; 
+      current_thread_ptr -> tx_errno = bsd_errno;
       
       TX_RESTORE  
 
@@ -8325,7 +8325,7 @@ TX_THREAD       *current_thread_ptr;
     TX_DISABLE
 
     current_thread_ptr =  tx_thread_identify();
-    val = current_thread_ptr -> bsd_errno;
+    val = current_thread_ptr -> tx_errno;
     
     TX_RESTORE  
     
