@@ -86,6 +86,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_ip_static_route_delete.c
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_ip_status_check.c
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_ip_thread_entry.c
+	${CMAKE_CURRENT_LIST_DIR}/src/nx_md5.c
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_packet_allocate.c
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_packet_copy.c
 	${CMAKE_CURRENT_LIST_DIR}/src/nx_packet_data_append.c
